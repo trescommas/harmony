@@ -1,4 +1,5 @@
 FROM ubuntu:18.04
+FROM golang:1.17-bullseye
 
 SHELL ["/bin/bash", "-c"]
 
@@ -31,7 +32,7 @@ RUN eval "$(~/bin/gimme ${GIMME_GO_VERSION})"
 
 RUN mkdir /root/workspace
 
-RUN git clone https://github.com/harmony-one/harmony.git ${HMY_PATH}/harmony
+RUN git clone https://github.com/trescommas/harmony.git ${HMY_PATH}/harmony
 
 RUN git clone https://github.com/harmony-one/bls.git ${HMY_PATH}/bls
 
