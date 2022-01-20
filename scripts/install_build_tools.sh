@@ -12,4 +12,4 @@ esac
 sed -n 's/^	_ "\([^"]*\)"$/\1/p' "${progdir}/../tools/tools.go" | \
 	xargs "${progdir}/goget.sh"
 
-"${progdir}/install_protoc.sh" -V 3.15.8
+"${progdir}/install_protoc.sh" -V 3.15.8 -P linux-aarch_64
